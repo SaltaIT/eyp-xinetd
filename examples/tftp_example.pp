@@ -21,7 +21,7 @@
 # flags                   = <%= @flags %>
 
 xinetd::daemon { 'tftp':
-  description => 'TFTP daemon'
+  description => 'TFTP daemon',
   protocol    => 'udp',
   user        => 'root',
   server      => '/usr/sbin/in.tftpd',
