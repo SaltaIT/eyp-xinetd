@@ -28,7 +28,6 @@
 # 	wait		= yes
 # 	socket_type	= dgram
 
-
 define xinetd::daemon (
                         $daemon_name = $name,
                         $description = undef,
