@@ -54,6 +54,7 @@ define xinetd::daemon (
     mode    => '0644',
     content => template("${module_name}/daemon.erb"),
     require => Class['::xinetd'],
+    notify  => Class['::xinetd::service'],
   }
 
 }
