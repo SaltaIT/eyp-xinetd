@@ -11,7 +11,7 @@ describe 'xinetd class' do
       class { 'xinetd': }
 
       xinetd::daemon { 'tftp':
-        description => 'TFTP daemon'
+        description => 'TFTP daemon',
         protocol    => 'udp',
         user        => 'root',
         server      => '/usr/sbin/in.tftpd',
