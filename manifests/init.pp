@@ -8,8 +8,6 @@ class xinetd(
               $purge_unmanaged_config = true,
             ) inherits xinetd::params{
 
-  validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
-
   class { '::xinetd::install': }
   -> class { '::xinetd::config': }
   ~> class { '::xinetd::service': }
