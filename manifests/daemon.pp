@@ -52,6 +52,7 @@ define xinetd::daemon (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
+    content => template("${module_name}/daemon.erb"),
     require => Class['::xinetd'],
   }
 
