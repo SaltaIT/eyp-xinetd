@@ -36,7 +36,6 @@ define xinetd::daemon (
                         $id          = $name,
                         $type        = 'INTERNAL',
                         $socket_type = 'dgram',
-                        #
                         $protocol    = undef,
                         $wait        = undef,
                         $user        = undef,
