@@ -1,0 +1,34 @@
+<% if defined?(@description) -%>
+
+# <%= @description %>
+<% end -%>
+
+service <%= @daemon_name %>
+{
+  disable                 = <%= scope.function_bool2yesno([@disable]) %>
+  id                      = <%= @id %>
+  type                    = <%= @type %>
+  wait                    = <%= scope.function_bool2yesno([@wait]) %>
+  socket_type             = <%= @socket_type %>
+  <%- if defined?(@protocol) -%>
+  protocol                = <%= @protocol %>
+  <%- end -%>
+  <%- if defined?(@user) -%>
+  user                    = <%= @user %>
+  <%- end -%>
+  <%- if defined?(@server) -%>
+  server                  = <%= @server %>
+  <%- end -%>
+  <%- if defined?(@server_args) -%>
+  server_args             = <%= @server_args %>
+  <%- end -%>
+  <%- if defined?(@per_source) -%>
+  per_source              = <%= @per_source %>
+  <%- end -%>
+  <%- if defined?(@max_cps) -%>
+  cps                     = <%= @max_cps %> <%= @cps_bantime %>
+  <%- end -%>
+  <%- if defined?(@flags) -%>
+  flags                   = <%= @flags %>
+  <%- end -%>
+}
