@@ -6,7 +6,7 @@ class xinetd(
               $service_ensure         = 'running',
               $service_enable         = true,
               $purge_unmanaged_config = true,
-              $xinetd_confd_ensure = 'directory',
+              $xinetd_confd_ensure    = 'directory',
             ) inherits xinetd::params{
 
   class { '::xinetd::install': }
