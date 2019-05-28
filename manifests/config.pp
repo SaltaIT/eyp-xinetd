@@ -1,7 +1,7 @@
 class xinetd::config inherits xinetd {
 
   file { '/etc/xinetd.d/':
-    ensure  => 'directory',
+    ensure  => $xinetd::xinetd_confd_ensure,
     owner   => 'root',
     group   => 'root',
     mode    => '0755',
