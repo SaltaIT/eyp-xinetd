@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.3
+
+* xinetd.d directory is deleted when the package is set to be absent
+
 ## 0.1.2
 
 * presence/absence of **xinetd.d** directory
