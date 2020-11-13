@@ -1,6 +1,6 @@
 {
   "name": "eyp-xinetd",
-  "version": "0.1.3",
+  "version": "1.0.3",
   "author": "Jordi Prats",
   "summary": "basic xinetd management",
   "license": "Apache-2.0",
